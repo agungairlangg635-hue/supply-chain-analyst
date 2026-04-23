@@ -121,8 +121,11 @@ jupyter notebook
 
 ## 📁 Dataset
 
-Dataset: DataCo Supply Chain Dataset
+Full dataset tersedia di:
 
+- [Download Dataset (Google Drive)](https://drive.google.com/file/d/14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N/view?usp=sharing)
+
+> Note: Dataset tidak di-upload ke GitHub karena ukuran file besar.
 
 
 ---
