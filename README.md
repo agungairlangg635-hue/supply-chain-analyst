@@ -1,4 +1,5 @@
 # supply-chain-analyst  
+![Banner](images/dashboard.png)
 # 🚚 Supply Chain Delivery Performance Analysis
 
 ## 📌 Project Overview
@@ -121,6 +122,7 @@ jupyter notebook
 ## 📁 Dataset
 
 Dataset: DataCo Supply Chain Dataset
+
 
 
 ---
