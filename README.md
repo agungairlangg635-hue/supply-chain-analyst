@@ -1,13 +1,19 @@
 # 🚚 Supply Chain Delivery Performance Analysis
 
-📊 Data Analyst Portfolio Project
-🎯 Fokus: Optimasi performa pengiriman & profitabilitas bisnis
+<p align="center">
+  <b>Data Analyst Portfolio Project</b><br>
+  📊 Analyzing Delivery Delays & Profit Impact in Supply Chain Operations
+</p>
 
 ---
 
-## 📌 Project Overview
+## 🎯 Project Highlights
 
-Project ini menganalisis performa pengiriman pada perusahaan e-commerce global untuk mengidentifikasi penyebab utama keterlambatan dan dampaknya terhadap profit.
+* 📦 **172K+ Orders Analyzed**
+* ⏱️ **54%+ Late Deliveries Identified**
+* 💰 **$7M+ Total Profit Evaluated**
+* ⚠️ **$2M+ Profit at Risk Detected**
+* 🤖 **Machine Learning Model (74% Accuracy)**
 
 ---
 
@@ -15,107 +21,101 @@ Project ini menganalisis performa pengiriman pada perusahaan e-commerce global u
 
 Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 
-* Penurunan kepuasan pelanggan
-* Risiko kehilangan profit
-* Ketidakakuratan estimasi pengiriman
+* ❌ Penurunan kepuasan pelanggan
+* ❌ Risiko kehilangan profit
+* ❌ Ketidakakuratan estimasi pengiriman
 
-👉 Masalah bersifat **sistemik**, bukan kasus individual
+> 🔎 Masalah ini bersifat **operasional dan sistemik**, bukan kejadian individual.
 
 ---
 
 ## 🎯 Objectives
 
-* Menganalisis performa pengiriman end-to-end
-* Mengukur dampak finansial keterlambatan
-* Mengidentifikasi bottleneck operasional
-* Membangun model prediksi keterlambatan
-* Memberikan rekomendasi strategis
+✔ Menganalisis performa pengiriman
+✔ Mengukur dampak finansial keterlambatan
+✔ Mengidentifikasi bottleneck utama
+✔ Membangun model prediksi keterlambatan
+✔ Memberikan rekomendasi bisnis
 
 ---
 
-## 📊 Key Insights
+## 📊 Key Metrics
 
-| Metric             | Value      |
-| ------------------ | ---------- |
-| Total Orders       | 172,765    |
-| Late Delivery Rate | **54.71%** |
-| On-Time Delivery   | 45.29%     |
-| Total Profit       | $7.5M      |
-| Profit at Risk     | $2.1M      |
-| Model Accuracy     | 74%        |
+| Metric                   | Value |
+| ------------------------ | ----- |
+| 📦 Total Orders          | 172K+ |
+| ⏱️ Late Delivery Rate    | 54%+  |
+| 💰 Total Profit          | $7M+  |
+| ⚠️ Profit at Risk        | $2M+  |
+| 🔻 Loss (Delayed Orders) | $2M+  |
+| 🤖 Model Accuracy        | 74%   |
 
 ---
 
 ## 📁 Dataset
 
-Dataset yang digunakan adalah **DataCo Supply Chain Dataset**.
+Dataset yang digunakan adalah **DataCo Supply Chain Dataset**
 
-### 🔗 Full Dataset
+🔗 Download:
+https://drive.google.com/file/d/14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N/view?usp=sharing
 
-👉 [Download Dataset](https://drive.google.com/file/d/14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N/view?usp=sharing)
-
-> ⚠️ Dataset tidak disimpan di GitHub karena ukuran file besar (>100MB)
-
----
-
-### ▶️ Load Data
-
-```python
-import pandas as pd
-
-url = "https://drive.google.com/uc?id=14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N"
-df = pd.read_csv(url, encoding='latin-1')
-```
+> ⚠️ Dataset tidak di-upload ke GitHub karena ukuran file besar (>100MB)
 
 ---
 
 ## ⚙️ Data Processing
 
-* Data Cleaning (hapus kolom tidak relevan)
-* Feature Engineering:
+✔ Data Cleaning (remove irrelevant columns)
+✔ Remove cancelled shipments
+✔ Datetime transformation
+✔ Feature Engineering:
 
-  * Order Processing Time
-  * Delay
-  * Is_Delayed
-  * Time Features
-  * Profitability Flag
+* Delay Calculation
+* Delivery Classification
+* Time-based Features
+* Profit Categorization
 
 ---
 
-## 📊 Analysis
+## 📊 Analysis & Insights
 
 ### 🔹 Delay Distribution
 
-Sebagian besar keterlambatan terjadi pada 1–4 hari → menunjukkan masalah operasional sistemik.
+Mayoritas keterlambatan terjadi pada **1–4 hari** → menunjukkan bottleneck operasional.
 
-### 🔹 Profit Analysis
+### 🔹 Profit Impact
 
-Profit per order stabil, namun volume order terlambat menyebabkan penurunan profit secara signifikan.
+Meskipun profit per order stabil, volume keterlambatan tinggi menyebabkan penurunan total profit.
 
 ### 🔹 Bottleneck Analysis
 
 Faktor utama:
 
-* 🚨 Shipping Mode (paling dominan)
-* Region relatif merata
-* Customer segment tidak signifikan
+* 🚧 Shipping Mode (critical factor)
+* 🌍 Region relatif merata
+* 👥 Customer segment tidak signifikan
 
 ---
 
 ## 🤖 Machine Learning
 
-Model yang digunakan:
+Model:
 
 * Random Forest Classifier
-* SMOTE untuk handling imbalance
+* SMOTE (Handling Imbalanced Data)
 
-📈 Hasil:
+📈 Result:
 
 * Accuracy: **74%**
-* Precision tinggi untuk late orders
-* Recall: 75%
+* Effective for identifying high-risk delayed orders
 
-👉 Model dapat digunakan sebagai **early warning system**
+---
+
+## 📸 Dashboard Preview
+
+<p align="center">
+  <img src="images/dashboard.png" width="800">
+</p>
 
 ---
 
@@ -123,37 +123,45 @@ Model yang digunakan:
 
 ### 🔴 Critical
 
-* Audit First & Second Class shipping
-* Deploy predictive alert system
+* Audit shipping methods (First & Second Class)
+* Implement predictive alert system
 
 ### 🟡 High
 
-* Perbaiki proses pembayaran
-* Optimasi kapasitas peak season
+* Optimize peak season capacity
+* Improve operational workflows
 
 ### 🟢 Medium
 
-* Gunakan Standard Class sebagai default
-* Audit department delay tinggi
+* Standardize shipping strategy
+* Continuous monitoring using dashboard
 
 ---
 
-## 📸 Visualization
+## 🛠️ Tech Stack
 
-Tambahkan screenshot dari notebook kamu di sini 👇
-
-```
-images/dashboard.png
-```
+<p>
+Python • Pandas • NumPy • Scikit-learn • SMOTE • Tableau • Matplotlib • Seaborn
+</p>
 
 ---
 
-## 🛠️ Tools & Technologies
+## 📂 Project Structure
 
-* Python (Pandas, NumPy)
-* Data Visualization (Matplotlib, Seaborn)
-* Machine Learning (Scikit-learn, SMOTE)
-* Google Colab
+```bash
+Supply-Chain-Delivery-Performance/
+│
+├── notebooks/
+│   └── SupplyChain.ipynb
+│
+├── dashboard/
+│   └── supply-chain-dashboard.twbx
+│
+├── images/
+│   └── dashboard.png
+│
+└── README.md
+```
 
 ---
 
@@ -163,8 +171,6 @@ images/dashboard.png
 pip install -r requirements.txt
 ```
 
-Buka notebook:
-
 ```bash
 jupyter notebook
 ```
@@ -173,4 +179,10 @@ jupyter notebook
 
 ## 👨‍💻 Author
 
-Project ini dibuat untuk portfolio Data Analyst & persiapan ujian BNSP.
+Portfolio Project — Data Analyst (BNSP Preparation)
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub!
