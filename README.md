@@ -121,7 +121,7 @@ jupyter notebook
 ## 📁 Dataset
 
 Dataset: DataCo Supply Chain Dataset
-(Upload manual jika diperlukan)
+
 
 ---
 
