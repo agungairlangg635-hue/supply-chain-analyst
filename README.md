@@ -1,10 +1,13 @@
-# supply-chain-analyst  
-
 # 🚚 Supply Chain Delivery Performance Analysis
+
+📊 Data Analyst Portfolio Project
+🎯 Fokus: Optimasi performa pengiriman & profitabilitas bisnis
+
+---
 
 ## 📌 Project Overview
 
-Project ini bertujuan untuk menganalisis performa pengiriman pada perusahaan e-commerce global dan mengidentifikasi penyebab utama keterlambatan serta dampaknya terhadap profitabilitas bisnis.
+Project ini menganalisis performa pengiriman pada perusahaan e-commerce global untuk mengidentifikasi penyebab utama keterlambatan dan dampaknya terhadap profit.
 
 ---
 
@@ -13,8 +16,10 @@ Project ini bertujuan untuk menganalisis performa pengiriman pada perusahaan e-c
 Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 
 * Penurunan kepuasan pelanggan
-* Kerugian profit signifikan
+* Risiko kehilangan profit
 * Ketidakakuratan estimasi pengiriman
+
+👉 Masalah bersifat **sistemik**, bukan kasus individual
 
 ---
 
@@ -24,84 +29,131 @@ Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 * Mengukur dampak finansial keterlambatan
 * Mengidentifikasi bottleneck operasional
 * Membangun model prediksi keterlambatan
-* Memberikan rekomendasi strategis berbasis data
+* Memberikan rekomendasi strategis
 
 ---
 
 ## 📊 Key Insights
 
-* 📦 Total Orders: 172,765
-* ⏱️ Late Delivery Rate: **54.71%**
-* 💰 Profit at Risk: **$2.1 Million**
-* 🤖 Model Accuracy: **74% (Random Forest)**
+| Metric             | Value      |
+| ------------------ | ---------- |
+| Total Orders       | 172,765    |
+| Late Delivery Rate | **54.71%** |
+| On-Time Delivery   | 45.29%     |
+| Total Profit       | $7.5M      |
+| Profit at Risk     | $2.1M      |
+| Model Accuracy     | 74%        |
 
 ---
 
-## 🔍 Key Findings
+## 📁 Dataset
 
-### 1. Massive Delay Issue
+Dataset yang digunakan adalah **DataCo Supply Chain Dataset**.
 
-Sebagian besar pesanan mengalami keterlambatan → ini bukan kasus minor, tapi masalah sistemik.
+### 🔗 Full Dataset
 
-### 2. Shipping Mode = Faktor Utama
+👉 [Download Dataset](https://drive.google.com/file/d/14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N/view?usp=sharing)
 
-* First Class: 100% delay ❌
-* Second Class: 79.8% delay ❌
-* Standard Class: paling stabil ✅
-
-### 3. Profit Dipengaruhi Volume Delay
-
-Bukan nilai order, tapi jumlah order terlambat yang jadi masalah utama.
+> ⚠️ Dataset tidak disimpan di GitHub karena ukuran file besar (>100MB)
 
 ---
 
-## 📈 Machine Learning Model
+### ▶️ Load Data
+
+```python
+import pandas as pd
+
+url = "https://drive.google.com/uc?id=14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N"
+df = pd.read_csv(url, encoding='latin-1')
+```
+
+---
+
+## ⚙️ Data Processing
+
+* Data Cleaning (hapus kolom tidak relevan)
+* Feature Engineering:
+
+  * Order Processing Time
+  * Delay
+  * Is_Delayed
+  * Time Features
+  * Profitability Flag
+
+---
+
+## 📊 Analysis
+
+### 🔹 Delay Distribution
+
+Sebagian besar keterlambatan terjadi pada 1–4 hari → menunjukkan masalah operasional sistemik.
+
+### 🔹 Profit Analysis
+
+Profit per order stabil, namun volume order terlambat menyebabkan penurunan profit secara signifikan.
+
+### 🔹 Bottleneck Analysis
+
+Faktor utama:
+
+* 🚨 Shipping Mode (paling dominan)
+* Region relatif merata
+* Customer segment tidak signifikan
+
+---
+
+## 🤖 Machine Learning
 
 Model yang digunakan:
 
 * Random Forest Classifier
 * SMOTE untuk handling imbalance
 
-Hasil:
+📈 Hasil:
 
-* Accuracy: 74%
-* Precision (Late): 78%
-* Recall (Late): 75%
+* Accuracy: **74%**
+* Precision tinggi untuk late orders
+* Recall: 75%
+
+👉 Model dapat digunakan sebagai **early warning system**
 
 ---
 
-## 🧠 Business Recommendations
+## 💡 Business Recommendations
 
 ### 🔴 Critical
 
-* Audit shipping mode (First & Second Class)
-* Implement predictive alert system
+* Audit First & Second Class shipping
+* Deploy predictive alert system
 
-### 🟡 Medium
+### 🟡 High
 
-* Optimasi kapasitas saat peak season
 * Perbaiki proses pembayaran
+* Optimasi kapasitas peak season
 
-### 🟢 Low
+### 🟢 Medium
 
-* Retrain model secara berkala
-* Optimasi pricing untuk order rugi
+* Gunakan Standard Class sebagai default
+* Audit department delay tinggi
+
+---
+
+## 📸 Visualization
+
+Tambahkan screenshot dari notebook kamu di sini 👇
+
+```
+images/dashboard.png
+```
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-* Python (Pandas, Scikit-learn)
-* Machine Learning (Random Forest, SMOTE)
+* Python (Pandas, NumPy)
 * Data Visualization (Matplotlib, Seaborn)
-* Jupyter Notebook / Google Colab
-
----
-
-## 📸 Project Preview
-
-Tambahkan screenshot dashboard di sini 👇
-(Upload ke folder images)
+* Machine Learning (Scikit-learn, SMOTE)
+* Google Colab
 
 ---
 
@@ -119,19 +171,6 @@ jupyter notebook
 
 ---
 
-## 📁 Dataset
-
-Full dataset tersedia di:
-
-- [Download Dataset (Google Drive)](https://drive.google.com/file/d/14SeeHaRiTcMYMRYMXSgY9IDHjc_MAE7N/view?usp=sharing)
-
-> Note: Dataset tidak di-upload ke GitHub karena ukuran file besar.
-
-
----
-
 ## 👨‍💻 Author
 
-Project ini dibuat untuk portofolio Data Analyst & persiapan ujian BNSP.
-
----
+Project ini dibuat untuk portfolio Data Analyst & persiapan ujian BNSP.
