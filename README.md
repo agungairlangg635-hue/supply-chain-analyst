@@ -1,23 +1,23 @@
-# 🚚 Supply Chain Delivery Performance Analysis
+# Supply Chain Delivery Performance Analysis
 
 <p align="center">
   <b>Data Analyst Portfolio Project</b><br>
-  📊 Analyzing Delivery Delays & Profit Impact in Supply Chain Operations
+   Analyzing Delivery Delays & Profit Impact in Supply Chain Operations
 </p>
 
 ---
 
-## 🎯 Project Highlights
+##  Project Highlights
 
-* 📦 **172K+ Orders Analyzed**
-* ⏱️ **54%+ Late Deliveries Identified**
-* 💰 **$7M+ Total Profit Evaluated**
-* ⚠️ **$2M+ Profit at Risk Detected**
-* 🤖 **Machine Learning Model (74% Accuracy)**
+*  **172K+ Orders Analyzed**
+*  **54%+ Late Deliveries Identified**
+*  **$7M+ Total Profit Evaluated**
+*  **$2M+ Profit at Risk Detected**
+*  **Machine Learning Model (74% Accuracy)**
 
 ---
 
-## 🚨 Business Problem
+##  Business Problem
 
 Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 
@@ -29,7 +29,7 @@ Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 ✔ Menganalisis performa pengiriman
 ✔ Mengukur dampak finansial keterlambatan
@@ -39,16 +39,16 @@ Lebih dari **50% pengiriman mengalami keterlambatan**, yang menyebabkan:
 
 ---
 
-## 📊 Key Metrics
+##  Key Metrics
 
 | Metric                   | Value |
 | ------------------------ | ----- |
-| 📦 Total Orders          | 172K+ |
-| ⏱️ Late Delivery Rate    | 54%+  |
-| 💰 Total Profit          | $7M+  |
-| ⚠️ Profit at Risk        | $2M+  |
-| 🔻 Loss (Delayed Orders) | $2M+  |
-| 🤖 Model Accuracy        | 74%   |
+|  Total Orders          | 172K+ |
+|  Late Delivery Rate    | 54%+  |
+|  Total Profit          | $7M+  |
+|  Profit at Risk        | $2M+  |
+|  Loss (Delayed Orders) | $2M+  |
+|  Model Accuracy        | 74%   |
 
 ---
 
@@ -91,27 +91,26 @@ Meskipun profit per order stabil, volume keterlambatan tinggi menyebabkan penuru
 
 Faktor utama:
 
-* 🚧 Shipping Mode (critical factor)
-* 🌍 Region relatif merata
-* 👥 Customer segment tidak signifikan
+*  Shipping Mode (critical factor)
+*  Region relatif merata
+*  Customer segment tidak signifikan
 
 ---
 
-## 🤖 Machine Learning
+##  Machine Learning
 
 Model:
 
 * Random Forest Classifier
 * SMOTE (Handling Imbalanced Data)
 
-📈 Result:
-
+Result:
 * Accuracy: **74%**
 * Effective for identifying high-risk delayed orders
 
 ---
 
-## 📸 Dashboard Preview
+##  Dashboard Preview
 
 <p align="center">
   <img src="images/dashboard.png" width="800">
@@ -119,7 +118,7 @@ Model:
 
 ---
 
-## 💡 Business Recommendations
+## Business Recommendations
 
 ### 🔴 Critical
 
